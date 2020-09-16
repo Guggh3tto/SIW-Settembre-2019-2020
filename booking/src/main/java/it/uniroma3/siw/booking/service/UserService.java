@@ -39,11 +39,6 @@ public class UserService {
 		return list;
 	}
 	
-	/*public User getBooker(Room room) {
-		User result = this.userRepository.findByReservedRooms(room);
-		return result;
-	}*/
-	
 	@Transactional
 	public List<User> getBookers(Book book) {
 		Iterable<User> iterable = this.userRepository.findByMyBooks(book);

@@ -13,16 +13,10 @@ import it.uniroma3.siw.booking.model.User;
 
 @Repository
 public interface BookRepository extends CrudRepository<Book, Long>{
-
-	//public Optional<Book> findByRoom(Room room);
 	
 	public List<Book> findByBooker(User booker);
 	
 	public List<Book> findByRoom(Room room);
-	
-	//public Optional<Book> findByCheckin(LocalDate checkin);
-	
-	//public Optional<Book> findByCheckout(LocalDate checkout);
 	
 	public List<Book> findByCheckin(LocalDate date);
 	

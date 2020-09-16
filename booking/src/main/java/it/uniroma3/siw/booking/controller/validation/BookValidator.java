@@ -24,9 +24,7 @@ public class BookValidator implements Validator {
 		Book book = (Book) o;
 		LocalDate checkin = book.getCheckin();
 		LocalDate checkout = book.getCheckout();
-		//Room room = book.getRoom();
 		
-		//List<Book> bookByRoom = this.bookService.retrieveBooksByRoom(room);
 		
 		if(Book.getDatesBetween(checkin, checkout).isEmpty() || Book.getDatesBetween(checkin, checkout)==null)
 			errors.rejectValue("checkin", "duplicate");
